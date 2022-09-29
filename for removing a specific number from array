@@ -1,0 +1,43 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class remove_specific_number1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the number: ");
+		int n=sc.nextInt();
+		System.out.print("\neneter the array : ");
+		int[] a=new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+			}
+		System.out.print(Arrays.toString(a));
+		System.out.print("\nenter the numer to remove :");
+		int b=sc.nextInt();
+		int k=0;
+		for(int i:a) {
+			if(b==i)
+				break;
+			else {
+				k=k+1;
+				continue;
+			}
+			
+			}
+		int[] c=new int[n-1];
+		for(int i=k;i<a.length-1;i++) {
+			a[i]=a[i+1];
+			c[i]=a[i];
+	}
+		for(int i=0;i<k;i++) {
+			c[i]=a[i];
+		}
+		System.out.println(Arrays.toString(c));
+	}
+
+
+	}
+
+
